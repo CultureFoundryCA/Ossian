@@ -1,0 +1,15 @@
+CultureFoundry Ossian Installation
+DEC 2020
+
+To install Ossian, run ./setup.sh. This will install the python2 virtualenv, create the folder ossian_env in the parent folder to the folder that holds this setup script, initialize the environment under python2, install python2 dependencies, and install Ossian in this environment. To use Ossian after the installation (assuming you're still in the current directory), type `source ../ossian_env/bin/activate`. To leave the env, type `deactivate`.
+
+See the setup script itself if using Anaconda for GPU optimization.
+
+Current list of dependencies (possibly incomplete since didn't install on fresh OS and was too naive to know to install it in a container):
+
+- for Linux
+	- sudo pacman -S base-devel clang libsndfile gsl libconfig
+	- sudo apt install build-essential clang libsndfile1-dev gsl-bin libgsl0-dev libconfig-dev
+
+Instructions on basic use can be found here: https://github.com/CSTR-Edinburgh/Ossian/
+Basic operation script is the run_ossian.sh file found in ossian_env.
